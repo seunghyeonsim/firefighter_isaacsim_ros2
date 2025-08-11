@@ -1,0 +1,40 @@
+# ROS2 워크스페이스
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Isaac Sim
+*.log
+*.usd
+*.usda
+*.usdc
+*.usdz
+*.kit
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 임시 파일
+*.tmp
+*.temp
+*.bak 

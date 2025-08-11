@@ -1,0 +1,1574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was created by Seunghyeon Sim [pprcr777@postech.ac.kr]-->
+<robot
+  name="firefighter">
+  <link
+    name="base_footprint" />
+  <joint
+    name="base_joint"
+    type="fixed">
+    <parent
+      link="base_footprint" />
+    <child
+      link="base_link" />
+    <origin
+      xyz="0 0 0.170"
+      rpy="0 0 0" />
+  </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.067656 0.00028867 0.26651"
+        rpy="0 0 0" />
+      <mass
+        value="108.73" />
+      <inertia
+        ixx="1.2228"
+        ixy="-0.00019934"
+        ixz="-0.053048"
+        iyy="2.2245"
+        iyz="0.00045555"
+        izz="1.9883" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighter_description/meshes/Tracked_Platform.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighter_description/meshes/Tracked_Platform.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Flipper_FL">
+    <inertial>
+      <origin
+        xyz="0.18675 7.9155E-06 -0.065489"
+        rpy="0 0 0" />
+      <mass
+        value="16.727" />
+      <inertia
+        ixx="0.098326"
+        ixy="0.00050611"
+        ixz="-0.00056746"
+        iyy="0.37866"
+        iyz="1.3392E-06"
+        izz="0.4432" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="3.141592 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighter_description/meshes/Flipper_FL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.3 0.3 0.3 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="3.141592 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighter_description/meshes/Flipper_FL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Flipper_FL"
+    type="revolute">
+    <origin
+      xyz="0.36195 0.453 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Flipper_FL" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.570796"
+      upper="1.570796"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Wheel_FL1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.176"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_FL1"
+    type="continuous">
+    <origin
+      xyz="0 0 0.06"
+      rpy="3.141592 0 0" />
+    <parent
+      link="Flipper_FL" />
+    <child
+      link="Wheel_FL1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_FL2">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.168"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_FL2"
+    type="continuous">
+    <origin
+      xyz="0.085 0 0.06"
+      rpy="3.141592 0 0" />
+    <parent
+      link="Flipper_FL" />
+    <child
+      link="Wheel_FL2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_FL3">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.160"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_FL3"
+    type="continuous">
+    <origin
+      xyz="0.17 0 0.06"
+      rpy="3.141592 0 0" />
+    <parent
+      link="Flipper_FL" />
+    <child
+      link="Wheel_FL3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_FL4">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.152"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_FL4"
+    type="continuous">
+    <origin
+      xyz="0.255 0 0.06"
+      rpy="3.141592 0 0" />
+    <parent
+      link="Flipper_FL" />
+    <child
+      link="Wheel_FL4" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_FL5">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.144"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_FL5"
+    type="continuous">
+    <origin
+      xyz="0.34 0 0.06"
+      rpy="3.141592 0 0" />
+    <parent
+      link="Flipper_FL" />
+    <child
+      link="Wheel_FL5" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_FL6">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.136"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_FL6"
+    type="continuous">
+    <origin
+      xyz="0.425 0 0.06"
+      rpy="3.141592 0 0" />
+    <parent
+      link="Flipper_FL" />
+    <child
+      link="Wheel_FL6" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_FL7">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.128"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_FL7"
+    type="continuous">
+    <origin
+      xyz="0.51 0 0.06"
+      rpy="3.141592 0 0" />
+    <parent
+      link="Flipper_FL" />
+    <child
+      link="Wheel_FL7" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Flipper_FR">
+    <inertial>
+      <origin
+        xyz="0.18675 -7.9196E-06 0.065489"
+        rpy="0 0 0" />
+      <mass
+        value="16.727" />
+      <inertia
+        ixx="0.098326"
+        ixy="-0.00050611"
+        ixz="0.00056737"
+        iyy="0.37866"
+        iyz="1.3387E-06"
+        izz="0.4432" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="3.141592 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighter_description/meshes/Flipper_FR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.3 0.3 0.3 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="3.141592 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighter_description/meshes/Flipper_FR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Flipper_FR"
+    type="revolute">
+    <origin
+      xyz="0.36195 -0.453 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Flipper_FR" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.570796"
+      upper="1.570796"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Wheel_FR1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.176"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_FR1"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.06"
+      rpy="3.141592 0 0" />
+    <parent
+      link="Flipper_FR" />
+    <child
+      link="Wheel_FR1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_FR2">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.168"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_FR2"
+    type="continuous">
+    <origin
+      xyz="0.085 0 -0.06"
+      rpy="3.141592 0 0" />
+    <parent
+      link="Flipper_FR" />
+    <child
+      link="Wheel_FR2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_FR3">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.160"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_FR3"
+    type="continuous">
+    <origin
+      xyz="0.17 0 -0.06"
+      rpy="3.141592 0 0" />
+    <parent
+      link="Flipper_FR" />
+    <child
+      link="Wheel_FR3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_FR4">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.152"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_FR4"
+    type="continuous">
+    <origin
+      xyz="0.255 0 -0.06"
+      rpy="3.141592 0 0" />
+    <parent
+      link="Flipper_FR" />
+    <child
+      link="Wheel_FR4" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_FR5">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.144"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_FR5"
+    type="continuous">
+    <origin
+      xyz="0.34 0 -0.06"
+      rpy="3.141592 0 0" />
+    <parent
+      link="Flipper_FR" />
+    <child
+      link="Wheel_FR5" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_FR6">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.136"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_FR6"
+    type="continuous">
+    <origin
+      xyz="0.425 0 -0.06"
+      rpy="3.141592 0 0" />
+    <parent
+      link="Flipper_FR" />
+    <child
+      link="Wheel_FR6" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_FR7">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.128"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_FR7"
+    type="continuous">
+    <origin
+      xyz="0.51 0 -0.06"
+      rpy="3.141592 0 0" />
+    <parent
+      link="Flipper_FR" />
+    <child
+      link="Wheel_FR7" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Flipper_RL">
+    <inertial>
+      <origin
+        xyz="-0.18446 -1.155E-05 -0.064977"
+        rpy="0 0 0" />
+      <mass
+        value="16.435" />
+      <inertia
+        ixx="0.094658"
+        ixy="0.00093941"
+        ixz="0.0005675"
+        iyy="0.37781"
+        iyz="8.8203E-06"
+        izz="0.44075" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighter_description/meshes/Flipper_RL.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.3 0.3 0.3 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighter_description/meshes/Flipper_RL.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Flipper_RL"
+    type="revolute">
+    <origin
+      xyz="-0.36195 0.453 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Flipper_RL" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.570796"
+      upper="1.570796"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Flipper_RR">
+    <inertial>
+      <origin
+        xyz="-0.18446 1.1673E-05 0.064977"
+        rpy="0 0 0" />
+      <mass
+        value="16.435" />
+      <inertia
+        ixx="0.094658"
+        ixy="-0.00093933"
+        ixz="-0.00056733"
+        iyy="0.37781"
+        iyz="8.8356E-06"
+        izz="0.44075" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighter_description/meshes/Flipper_RR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.3 0.3 0.3 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighter_description/meshes/Flipper_RR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Flipper_RR"
+    type="revolute">
+    <origin
+      xyz="-0.36195 -0.453 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Flipper_RR" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.570796"
+      upper="1.570796"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Wheel_RL1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.176"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_RL1"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.06"
+      rpy="0 0 0" />
+    <parent
+      link="Flipper_RL" />
+    <child
+      link="Wheel_RL1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_RL2">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.168"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_RL2"
+    type="continuous">
+    <origin
+      xyz="-0.085 0 -0.06"
+      rpy="0 0 0" />
+    <parent
+      link="Flipper_RL" />
+    <child
+      link="Wheel_RL2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_RL3">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.160"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_RL3"
+    type="continuous">
+    <origin
+      xyz="-0.17 0 -0.06"
+      rpy="0 0 0" />
+    <parent
+      link="Flipper_RL" />
+    <child
+      link="Wheel_RL3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_RL4">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.152"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_RL4"
+    type="continuous">
+    <origin
+      xyz="-0.255 0 -0.06"
+      rpy="0 0 0" />
+    <parent
+      link="Flipper_RL" />
+    <child
+      link="Wheel_RL4" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_RL5">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.144"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_RL5"
+    type="continuous">
+    <origin
+      xyz="-0.34 0 -0.06"
+      rpy="0 0 0" />
+    <parent
+      link="Flipper_RL" />
+    <child
+      link="Wheel_RL5" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_RL6">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.136"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_RL6"
+    type="continuous">
+    <origin
+      xyz="-0.425 0 -0.06"
+      rpy="0 0 0" />
+    <parent
+      link="Flipper_RL" />
+    <child
+      link="Wheel_RL6" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_RL7">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.128"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_RL7"
+    type="continuous">
+    <origin
+      xyz="-0.51 0 -0.06"
+      rpy="0 0 0" />
+    <parent
+      link="Flipper_RL" />
+    <child
+      link="Wheel_RL7" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_RR1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.176"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_RR1"
+    type="continuous">
+    <origin
+      xyz="0 0 0.06"
+      rpy="0 0 0" />
+    <parent
+      link="Flipper_RR" />
+    <child
+      link="Wheel_RR1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_RR2">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.168"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_RR2"
+    type="continuous">
+    <origin
+      xyz="-0.085 0 0.06"
+      rpy="0 0 0" />
+    <parent
+      link="Flipper_RR" />
+    <child
+      link="Wheel_RR2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_RR3">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.160"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_RR3"
+    type="continuous">
+    <origin
+      xyz="-0.17 0 0.06"
+      rpy="0 0 0" />
+    <parent
+      link="Flipper_RR" />
+    <child
+      link="Wheel_RR3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_RR4">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.152"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_RR4"
+    type="continuous">
+    <origin
+      xyz="-0.255 0 0.06"
+      rpy="0 0 0" />
+    <parent
+      link="Flipper_RR" />
+    <child
+      link="Wheel_RR4" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_RR5">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.144"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_RR5"
+    type="continuous">
+    <origin
+      xyz="-0.34 0 0.06"
+      rpy="0 0 0" />
+    <parent
+      link="Flipper_RR" />
+    <child
+      link="Wheel_RR5" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_RR6">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.136"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_RR6"
+    type="continuous">
+    <origin
+      xyz="-0.425 0 0.06"
+      rpy="0 0 0" />
+    <parent
+      link="Flipper_RR" />
+    <child
+      link="Wheel_RR6" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wheel_RR7">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+    </inertial>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder
+          radius="0.128"
+          length="0.11" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="Wheel_RR7"
+    type="continuous">
+    <origin
+      xyz="-0.51 0 0.06"
+      rpy="0 0 0" />
+    <parent
+      link="Flipper_RR" />
+    <child
+      link="Wheel_RR7" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link
+    name="Cannon_L1">
+    <inertial>
+      <origin
+        xyz="0.029924 -0.00038242 0.092803"
+        rpy="0 0 0" />
+      <mass
+        value="3.486" />
+      <inertia
+        ixx="0.0047996"
+        ixy="5.9555E-07"
+        ixz="-1.4416E-06"
+        iyy="0.011072"
+        iyz="4.1438E-06"
+        izz="0.010941" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighter_description/meshes/Cannon_L1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighter_description/meshes/Cannon_L1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Cannon_J1"
+    type="revolute">
+    <origin
+      xyz="0.16595 0 0.6895"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Cannon_L1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.570796"
+      upper="1.570796"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Cannon_L2">
+    <inertial>
+      <origin
+        xyz="0.24768 -0.00022619 -0.00013819"
+        rpy="0 0 0" />
+      <mass
+        value="2.3062" />
+      <inertia
+        ixx="0.0038013"
+        ixy="5.0251E-05"
+        ixz="1.8417E-05"
+        iyy="0.0067426"
+        iyz="-8.5293E-08"
+        izz="0.0066925" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighter_description/meshes/Cannon_L2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://firefighter_description/meshes/Cannon_L2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Cannon_J2"
+    type="revolute">
+    <origin
+      xyz="0.149 0 0.095"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Cannon_L1" />
+    <child
+      link="Cannon_L2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.174533"
+      upper="1.134464"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
