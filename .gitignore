@@ -1,40 +1,12 @@
-# ROS2 워크스페이스
+# ROS2 워크스페이스 (빌드 결과물만 제외)
 build/
 install/
 log/
 
-# Python
+# Python 캐시만 제외
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+*.pyc
 
-# Isaac Sim
-*.log
-*.usd
-*.usda
-*.usdc
-*.usdz
-*.kit
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
+# 시스템 파일만 제외
 .DS_Store
-Thumbs.db
-
-# 임시 파일
-*.tmp
-*.temp
-*.bak 
+Thumbs.db 
