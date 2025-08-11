@@ -9,4 +9,11 @@ __pycache__/
 
 # 시스템 파일만 제외
 .DS_Store
-Thumbs.db 
+Thumbs.db
+
+# 큰 USD 파일들 제외 (GitHub 100MB 제한)
+src/firefighter_description/urdf/firefighter/configuration/firefighter_base.usd
+src/firefighter_description/urdf/firefighter/configuration/firefighter_physics.usd
+src/firefighter_description/urdf/firefighter/configuration/firefighter_sensor.usd
+src/firefighter_description/urdf/firefighter/firefighter.usd
+src/firefighter_description/usd/firefighter_scene.usd 
